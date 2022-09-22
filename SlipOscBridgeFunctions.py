@@ -80,7 +80,7 @@ def serialInHandler():
                             msg = message[1:len(message)-1] # remove beginning and trailing END characters
                             if not (msg.endswith(ESC) or re.search(ESC + b'[^' + ESC_END + ESC_ESC + b']', msg)):
                                 serial2OscQueue.put(msg.replace(ESC + ESC_END, END).replace(ESC + ESC_ESC, ESC))
-                                message = b'' #next message
+                            message = b'' #next message
     # close SerialPort after stopping
     del serialPort
 
