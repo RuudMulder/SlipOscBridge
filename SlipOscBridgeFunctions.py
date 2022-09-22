@@ -1,4 +1,4 @@
-import queue
+√import queue
 import socket
 import serial
 import serial.tools.list_ports
@@ -75,12 +75,19 @@ def serialInHandler():
                             message = END # start of possible new message
                         elif len(message) > 1: # skip message with only first END byte
                             # complete message received
-                            print('Serial in message:')
-                            print(message)
-                            msg = message[1:len(message)-1] # remove beginning and trailing END characters
-                            if not (msg.endswith(ESC) or re.search(ESC + b'[^' + ESC_END + ESC_ESC + b']', msg)):
-                                serial2OscQueue.put(msg.replace(ESC + ESC_END, END).replace(ESC + ESC_ESC, ESC))
-                            message = b'' #next message
+                            # print('Serial in message:')
+                            # print(message)
+                            msg = message[1:len(message)-1]
+                            # remove beginning and trailing END characters
+                            if not (
+                                msg.endswith(ESC)
+                                or re.search(
+                                    ESC + b'[^' + ESC_END + ESC_ESC + b']',
+                                    msg)):
+                                __Serial2OscQueue.put(
+                                    msg.replace(ESC + ESC_END, END
+                                               ).replace(ESC + ESC_ESC, ESC))
+                            message = b''  # next message
     # close SerialPort after stopping
     del serialPort
 
@@ -93,8 +100,8 @@ def serialOutHandler():
             continue
         if bridgeActive: # just to be safe, server may have been stopped and port deleted by serialInHandler
             msgout = END + msg.replace(ESC, ESC + ESC_ESC).replace(END, ESC + ESC_END) + END
-            print('Serial out message:')
-            print(msgout)
+            # print('Serial out message:')
+            # print(msgout)
             serialPort.write(msgout)
 
 oscInThread     = None
