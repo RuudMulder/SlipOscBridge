@@ -8,10 +8,9 @@ This is an application to make a bridge from Slip to UDP sockets. It is intended
 
 It can be used for any UDP-Slip connection
 
-A complete application for OS X can be downloaded from: [SerialMidiBridge.app.zip](https://mega.nz/file/k5skCQqL#Gu-krXfbGkKWxxRzex5TsaKGbu9fc9izKQyb72-ZagA).
+A complete application for OS X can be downloaded from: [SlipOscBridge.app.zip](https://mega.nz/file/YskThJjY#rG_SArdyJI-Ki8k1v7-TvpLXHTtJSIHAbAEoORcmz7Q).
 
-It also works on Linux (at least on Lubuntu19). A complete application for Linux can be downloaded from:
-[SlipOscBridge.zip](https://mega.nz/file/Ug9h1QTB#_gvN7DPf7y9jejG2K-4btN61jieIyUxwtCvAK9iOorQ)
+It also works on Linux (at least on Lubuntu19).
 
 Windows users will have to generate an application by themselves or start it from the command line as described below.
 
