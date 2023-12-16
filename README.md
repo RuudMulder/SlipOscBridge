@@ -8,7 +8,7 @@ This is an application to make a bridge from Slip to UDP sockets. It is intended
 
 It can be used for any UDP-Slip connection
 
-A complete application for OS X can be downloaded from: [SlipOscBridge.app.zip](https://mega.nz/file/YskThJjY#rG_SArdyJI-Ki8k1v7-TvpLXHTtJSIHAbAEoORcmz7Q).
+A complete application for OS X can be downloaded from: [SlipOscBridge.app.zip](https://mega.nz/file/N5NDFbTZ#N3yrvTDdjjxsQethwLB87FAkcVjrkHEyRQ97X_YgjWk).
 
 It also works on Linux (at least on Lubuntu19).
 
