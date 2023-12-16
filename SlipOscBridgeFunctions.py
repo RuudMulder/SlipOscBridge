@@ -84,7 +84,7 @@ def serialInHandler():
                                 or re.search(
                                     ESC + b'[^' + ESC_END + ESC_ESC + b']',
                                     msg)):
-                                __Serial2OscQueue.put(
+                                serial2OscQueue.put(
                                     msg.replace(ESC + ESC_END, END
                                                ).replace(ESC + ESC_ESC, ESC))
                             message = b''  # next message
